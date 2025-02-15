@@ -40,3 +40,6 @@ class RollingAverage:
         if len(self.window) == 0:
             return None
         return self.sum / len(self.window)
+
+    def clear(self):
+        return self.clear()
