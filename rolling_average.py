@@ -37,9 +37,9 @@ class RollingAverage:
         self.sum += value
 
     def get_average(self):
-        if len(self.window) == 0:
+        if len(self.window) <= 25:  # Do not start returning averages until at least 25 elements collected
             return None
         return self.sum / len(self.window)
 
     def clear(self):
-        return self.clear()
+        return self.window.clear()
